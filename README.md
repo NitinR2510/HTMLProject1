@@ -1,2 +1,4 @@
 # HTMLProject1
-HTMLStoryDAY1_29thMay2020
+HTML Story DAY1
+29th May 2020
+Made on 70th day of lockdown. 
