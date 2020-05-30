@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Evening
+        </title>
+        <style>
+        body{
+                padding: 0.5rem;
+                background-image: url("evening_room.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                color: antiquewhite;
+            }
+            button {
+                background-color: Transparent;
+                background-repeat:no-repeat;
+                cursor:pointer;
+                overflow: hidden;
+                outline:none;
+                color: antiquewhite;
+                }
+            button:hover{
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            After lunch, you go to your friend's room and play chess for a few hours. You chat with him and feel at ease.
+            <br>
+            It is almost evening when you come back to your room.
+            <br>
+            <br> The evenings make the day feel good again. You decide against switching on the lights.
+            <br>
+            You just pull up your jacket, take a chair and sit by the window. Pleasant air hits your face while you put on your headphones.
+            <br>
+            <br><br>
+            <button onclick="playAudio()">Listen to Music</button><br><br>
+             <img src="headphones.png" style="width: 100px; height: 100px;">
+            <br><br>
+           It has been a tedious week. You had so many assignments, so many tests and just another regular crisis.
+           <br>
+           You almost wanted to cry a few days back. And now, you felt so relaxed.
+           <br>
+           Today was so peaceful. It felt so good to be calm again. To do nothing for atleast one whole day.
+           <br><br>
+           .<br>.<br>.<br>.<br>.<br><br>
+           The music ends and you decide it is time for dinner.
+           <br>You replace the headphones, stand up and feel relaxed.
+           <br>May be your luck is good and there is something awesome in dinner!            
+        </p>
+       
+        <audio id="myAudio">
+            <source src="Namaste.mp3" type="audio/mpeg">
+             Your browser does not support audio tag
+          </audio>
+          
+        <button onclick="Night()">Have Dinner and Retire to Bed</button>
+        
+        <script>
+            var x = document.getElementById("myAudio"); 
+     function playAudio() { 
+       x.play(); 
+     } 
+     function Night(){
+         location.href = "night.html"
+     }
+     function afternoon(){
+         location.href = "afternoon.html"
+     }
+     </script>
+    </body>
+</html>

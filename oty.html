@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            HillStation.com
+        </title>
+        <meta charset="utf-8">
+        <style>
+        body{
+            background-image: url("hillstation.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: black;
+        }
+        header{
+            background-color: green;
+            color: yellow;
+            padding: 0.2rem;
+        }
+        footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: beige;
+                color: black;
+                text-align: center;
+                padding: 0.7rem;
+                font-family: cursive;
+                }
+                button {
+                background-color: Transparent;
+                background-repeat:no-repeat;
+                cursor:pointer;
+                overflow: hidden;
+                border: none;
+                outline:none;
+               }
+               #play{
+                   color: white;
+               }
+                #go:hover{
+                    background-color: black;
+                    color: white;
+                }
+                #play:hover{
+                    background-color: white;
+                    color: black;
+                }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h2>HillStation.com</h2>
+        </header>
+        <p style="background-color: black; color: antiquewhite; text-align: center; padding: 0.4rem;">
+            <audio id="myAudio" loop="True">
+                <source src="Happy_AShamaluevMusic.mp3" type="audio/mpeg">
+                 Your browser does not support audio tag
+              </audio>
+              <button id= "play" onclick="playAudio()" type="button">Play Music</button><br>
+            <img src="ooty1.jpg" style="width: 400px; height: 400px; margin: .2rem;">
+            <img src="ooty2.jpg" style="width: 400px; height: 400px; margin: .2rem;">
+            <img src="ooty3.jpg" style="width: 400px; height: 400px; margin: .2rem;">
+        </p>
+        <footer>
+            COME AND ENJOY YOURSELF IN THIS HEAVEN OF SOUTH INDIA
+            <br>
+            <button id="go" onclick="lunch()">You head for lunch</button>
+        </footer>
+        <script>
+                    var x = document.getElementById("myAudio"); 
+        function playAudio() { 
+          x.play(); 
+        } 
+            function lunch(){
+                location.href= "Evening.html"
+            }
+        </script>
+    </body>
+</html>

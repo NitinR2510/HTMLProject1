@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Morning
+        </title>
+        <style>
+            body{
+                background-color: black;
+                color: white;
+                padding: 0.5rem;
+                background-image: url("dawn.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                color: antiquewhite;
+            }
+            #phone{
+                height: 200px;
+                width: 200px;
+            }
+            header{
+                border-bottom: 2px white solid;
+                margin: .3rem;
+                padding: .5rem;
+                font-size: large;
+                color: yellow;
+                font-family: cursive;
+            }
+            #window{
+                height: 300px;
+                width: 300px;
+            }
+            #alarm{
+                text-align: center;
+                       }
+             button {
+                 width: 200px;
+                 font-size: 18px;
+                 background-color: Transparent;
+                background-repeat:no-repeat;
+                cursor:pointer;
+                overflow: hidden;
+                outline:none;
+                color: white;
+             }
+             section{
+                 text-align: center;
+             }
+
+            button:hover {
+                background: #ddd;
+                color: black;
+                }
+            #window{
+                margin: 0.7rem;
+                border: #ddd double .8rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            IT'S A NEW DAY
+        </header>
+        <img id="phone" src="clock.jpg" alt="Bangalore in the morning">
+        <p style="float: left;"> 
+            The alarm rings continuously. You reach for it on the table.<br>
+            You turn off the alarm and grudgingly enough, rise to sit<br>on your bed. 
+        </p> 
+        <section id="call">
+           <audio id="myAudio">
+                <source src="Ambient-Birds-Singing-A2-fesliyanstudios.mp3" type="audio/mpeg">
+                 Your browser does not support audio tag
+              </audio>
+              <button class="butt" onclick="playAudio()" type="button">Start the Day</button>            
+            <p id="alarm">
+                <img id="window" src="Hyderabad morning.jpg"> <br><br>
+                You look up. A silent ray of sunlight is entering through the window. It's the birds chirping outside.
+                <br>You love these mornings.
+                <br>
+                Winter probably is the best part of the year. The mornings are so very beautiful these days.<br>
+                The skies are clear or often full of mist. The chirping of birds are distinctly clear in the morning now that most poeple do not actually wake up so early.
+                <br>
+                You decide to sit by the window for a while and just listen to the birds chirp
+                <br>
+                However, you soon realise you have a class to atten and so you go to freshen up and move out. 
+                <br>
+                However, you have plenty of time. So, you decide to take a bath today. A hot bath would definitely be the best, you decide.
+                <br>
+                .
+                <br>
+                .
+                <br>
+                .
+                <br>
+                And so, you head out for your class after bath and a good, sumptuous breakfast.
+            </p>
+            <button onclick="afternoon()">Go to class</button>
+        </section>
+        <script>
+               var x = document.getElementById("myAudio"); 
+        function playAudio() { 
+          x.play(); 
+        } 
+        function afternoon(){
+            location.href = "afternoon.html"
+        }
+        </script>
+    </body>
+</html>

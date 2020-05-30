@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Afternoon
+        </title>
+        <style>
+            body{
+                padding: 0.5rem;
+                background-image: url("OOTY.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            header{
+                font-family: chiller;
+                font-size: 40px;
+                color: blueviolet;
+                border-left: 0.3rem black solid;
+                padding-left: 2rem;
+                width: 50%;
+            }
+            div {
+                width: 30px;
+                height: 20px;
+                background: red;
+                transition: width 2s;
+                }
+            div:hover {
+                width: 500px;
+            }
+            #ooty{
+                float: left;
+            }
+            footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: beige;
+                color: black;
+                text-align: center;
+                padding: 0.7rem;
+                font-family: cursive;
+                }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2> AFTERNOON </h2>
+        </header>
+        <p style="font-family: monospace;">Hover over the lower bar to know the amount of heat in air</p>
+        <div></div>
+        <p id="heat" style="background-color: black; color: antiquewhite; padding: 0.5rem; text-align: center;">
+            It's hot and unbearable. South India does not offer a lot many place to enjoy in a winter afternoon. <br>
+            You feel it is still summer. And sitting in the class, you are lost in the idea that you might as well <br>
+            visit some hill station this weekend instead of lying in your hostel, and feel eager to ask others to come with you. <br>
+            <br>.<br>.<br>.<br>.<br>
+            Your trance is broken by the class bell. Your friend asks you to wake up, the lecturer has gone already.
+            <br>
+            You decide to head back to your hostel room. Your plans are too big to fail. Tomorrow is not a very important day.
+            <br> And it is weekend the day after. <br>
+            You sit by your laptop and check out the near-by hill stations. Ooty catches your attention.
+            <br><strong>Ooty it is!!!</strong>
+            <br>You close the laptop. Tomorrow, you shall let everyone know that they were all heading to Ooty.
+            <br> Because you are well aware, everyone will follow. They are too bored at this place, just like yourself.
+            <br>
+            You head out for lunch.
+        </p>
+        <footer>
+            <button onclick="evening()">Head out for Lunch</button>
+            <button onclick="oty()">Check out hill station once again</button>
+        </footer>
+        <script>
+            function evening(){
+                location.href = "Evening.html"
+            }
+            function oty(){
+                location.href="oty.html"
+            }
+        </script>
+        
+    </body>
+</html>
