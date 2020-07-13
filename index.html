@@ -4,79 +4,114 @@
         <title>
             Just a Day
         </title>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!--custom css-->
         <style>
             body{
-                background-color: black;
-                color: beige;
-            }
-            header{
-                color: whitesmoke;
-                font-family: serif;
-                font-size:medium;
-                padding: 0.2rem;
+                color: #dddddd;
                 text-align: center;
             }
-            #name{
-                text-align: center;
+            .col-sm-4{
+                height: 700px;
             }
-            #logo{
-                height: 300px;
-                width: 300px;
-            }
-            .butt1{
-                
-                padding: 10px 14px;
-                display: inline-block;
-                background-color: white;
-                border: 2px solid yellow;
-                transition-duration: 0.4s;
-                display: block;
-            }
-        
-            .butt:hover{
-                background-color: #4CAF50;
-                color: white;
-                }
             footer{
                 position: fixed;
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                background-color: beige;
-                color: black;
+                background-color: #000;
+                padding: 0.4rem;
+                color: white;
                 text-align: center;
-                padding: 0.7rem;
-                font-family: cursive;
-                }
+            }
+            button{
+                margin-bottom: 0.3rem;
+                border: none;
+                background: transparent;
+                transition-property: font-size;
+                font-size: 100%;
+            }
+            button:hover{
+                transition-property: font-size;
+                transition-duration: 0.3s;
+                font-size: 150%;
+            }
+            #first{
+                background-image: url("img/hostel-dorm-cover.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #second{
+                background-image: url("img/cover-2.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
 
+            }
+            .mobile{
+                display: none;
+            }
+            @media only screen and (max-height: 700px) {
+                #first, #second {
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                }
+            }
         </style>
     </head>
     <body>
-        <header>
-            <marquee>
-            Click Play music and just lie down and relax. (Or) Click Play Game
-            </marquee>
-        </header>
-        <canvas id="canvas" width="150" height="150" style="background-color:#000"></canvas>
-        <section id="name">
-            <img id="logo" src="img/a regular day.png"><br>
-            <button class = "butt" onclick="playgame()">Play Game</button><br>
-            <button class="butt" onclick="playAudio()" type="button">Play Music</button>
-            <button class="butt" onclick="pauseAudio()" type="button">Pause Music</button>
-            <button class="butt" onclick="faq()">About&Credits</button><br>
-            <button class="butt" onclick="code()">Code</button>
-        </section>
-        <audio id="myAudio">
-            <source src="music/5Symphony.mp3" type="audio/mpeg">
-             Your browser does not support audio tag
-          </audio>
-          <footer>
-              Game designed for relaxation alone.
-              <br>
-              Make something more beautiful, all the best.
-          </footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4" id="first">
+                <canvas id="canvas" width="150" height="150" style="background: transparent;"></canvas>
+                <img src="img/calvin-cover.jpg" alt="calvin-hobbes image">
+            </div>
+            <div class="col-sm-4" style="background-color:#000;" id="imp">
+                <div id="heading">
+                    <h1>Just A Day</h1>
+                    <h5>Relive a Day at your University</h5>
+                    <img src="img/a%20regular%20day.png" width="150px"><br>
+                    Game designed for relaxation alone.
+                    How about you make something better, more beautiful?
+                    All the best!!!
+                    <br><br>
+                    <p class="mobile">
+                        (You are watching this on a small screen)
+                    </p>
+                </div>
+                <br><br><br>
+                <button class = "butt" onclick="playgame()">Play Game</button><br>
+                <button class="butt" onclick="playAudio()" type="button">Play Music</button> <br>
+                <button class="butt" onclick="pauseAudio()" type="button">Pause Music</button> <br>
+                <button class="butt" onclick="faq()">About&Credits</button><br>
+                <button class="butt" onclick="code()">Code</button>
+                <br><br><br>
+                <audio id="myAudio">
+                    <source src="music/5Symphony.mp3" type="audio/mpeg">
+                    Your browser does not support audio tag
+                </audio>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;" id="second">
+                <img src="img/cover-3.png" alt="calvin-image-music">
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        Made by Nitin Ranjan.
+    </footer>
+
+
+    <!--Custom Script-->
         <script>
+            function code(){
+                location.href="https://github.com/NitinR2510/HTMLProject1"
+            }
             function playgame() {
                 location.href = "morning.html"
             }
@@ -171,5 +206,9 @@
                 ctx.rotate(-pos);
             }
             </script>
+            <!--bootstrap-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </body>
-</html>    
+</html>
